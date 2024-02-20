@@ -1,0 +1,13 @@
+version: '3'
+services:
+  backend:
+    container_name: backend
+    image: $bamboodockerrepo/$bambooprojectname/backend:v1.0
+    restart: always
+    networks:
+      -  my_local_network
+    command: "--environment Development"
+
+networks:
+   my_local_network:
+    external: true
